@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  font-family: "Nunito", sans-serif;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.menu-section {
+  position: fixed;
+  width: 100vw;
+  height: 103px;
+  background-color: #fbfbfb;
+  box-shadow: 0 10px 10px #888888;
+  border: none;
+
+  /* layout */
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr auto auto 100px;
+  justify-items: end;
+  align-items: center;
+}
+.menu-section .bar-container.hide-desktop {
+  display: none;
+}
+
+.menu-section .menu-container {
+  grid-column: 2/3;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: repeat(3, 1fr);
+
+  /* design */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.menu-section .menu-container a {
+  text-decoration: none;
+  color: #333333;
+  margin: 30px;
+  position: relative;
+}
+.menu-section .menu-container a::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background-color: #333333;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 1s;
+}
+.menu-section .menu-container a:hover::after {
+  width: 100%;
+}
+.menu-section .line {
+  grid-column: 3/4;
+  height: 55px;
+  width: 1px;
+  background-color: #333333;
+  border: 2px solid #333333;
+}
+.menu-section .icon-container {
+  grid-column: 4/5;
+  margin-left: 10px;
+}
+.menu-section .icon-container .add-to-cart {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* main section */
+.main-section {
+  height: 100vh;
+  background-color: #fbfbfb;
+
+  /* layout */
+  display: grid;
+  grid-template-rows: 150px 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(4, 1fr);
+}
+.main-section .box-container1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: grid;
+  grid-auto-rows: auto auto auto 60px;
+  place-items: center;
+
+  /* design */
+  background-color: white;
+  border: 1px solid black;
+}
+.main-section .box-container1 .image-container {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container1 .image-container .cross {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container1 .name-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container1 .price-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container1 button {
+  width: 130px;
+  height: 52px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fbfbfb;
+  border: none;
+}
+
+/* box2 */
+.main-section .box-container2 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  border: 1px solid black;
+  background-color: white;
+  /* layout */
+  display: grid;
+  grid-template-rows: auto auto auto 60px;
+  place-items: center;
+}
+.main-section .box-container2 .image-container {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container2 .image-container .st-benedict {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container2 .name-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container2 .price-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container2 button {
+  width: 130px;
+  height: 52px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fbfbfb;
+  border: none;
+}
+
+/* box3 */
+.main-section .box-container3 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  border: 1px solid black;
+  background-color: white;
+  /* layout */
+  display: grid;
+  grid-template-rows: auto auto auto 60px;
+  place-items: center;
+}
+.main-section .box-container3 .image-container {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container3 .image-container img {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container3 .name-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container3 .price-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container3 button {
+  width: 130px;
+  height: 52px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fbfbfb;
+  border: none;
+}
+
+/* box4 */
+.main-section .box-container4 {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  border: 1px solid black;
+  background-color: white;
+  /* layout */
+  display: grid;
+  grid-template-rows: auto auto auto 60px;
+  place-items: center;
+}
+.main-section .box-container4 .image-container {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container4 .image-container img {
+  height: auto;
+  width: 100%;
+}
+.main-section .box-container4 .name-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container4 .price-container {
+  font-size: 25px;
+  text-align: center;
+}
+.main-section .box-container4 button {
+  width: 130px;
+  height: 52px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #333333;
+  color: #fbfbfb;
+  border: none;
+}
+
+/* responsive for mobile */
+@media (max-width: 500px) {
+  /* menus */
+  .menu-section {
+    grid-template-columns: 10px 1fr auto auto 20px;
+    grid-auto-rows: 1fr 1fr 1fr;
+    justify-items: start;
+
+    /* design */
+    box-shadow: none;
+    background-color: #fbfbfb;
+    height: auto;
+    padding: 10px;
+  }
+  .menu-section .bar-container.hide-desktop {
+    display: block;
+    grid-column: 2/3;
+    font-size: 30px;
+  }
+  .menu-section .menu-container {
+    position: fixed;
+    top: 78px;
+    left: 0;
+    width: 100vw;
+    height: 150px;
+    padding: 10px;
+
+    /* design */
+    text-align: center;
+    background-color: #fbfbfb;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr 1fr 1fr;
+  }
+}
